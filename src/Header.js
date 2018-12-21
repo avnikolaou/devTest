@@ -19,9 +19,9 @@ class Header extends Component {
                     </div>
                 </div>
                 <div className="main-header">
-                    <img src="../images/cover.png"/>
+                    <img src="../images/cover.png" alt="Cover"/>
                     <div className="picture">
-                        <img src="../images/cover.png"/>
+                        <img src="../images/image.png" alt="Profle"/>
                     </div>
                 </div>
             </div>

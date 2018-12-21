@@ -19,21 +19,27 @@ class App extends Component {
             .then((response) => {
                 return response.json();
             }).then(function(data) {
-                console.log("My data: ", data);
-                data.sources.map((article => {
-
-                }));
+                this.setState({
+                    articles: data.sources
+                })
         }.bind(this)).catch(() => {
             alert("Could not fetch date from API!!");
         });
-        console.log("My articles" , this.state.articles);
     };
 
     render() {
+
+        const {articles } = this.state;
         return (
             <div>
                 <Header/>
-                <Main/>
+                <div className="main-content">
+                    <ol>
+                        {this.state.articles.map(article => (
+                            <p>{article.name}</p>
+                        ))}
+                    </ol>
+                </div>
                 <Footer/>
             </div>
         );
