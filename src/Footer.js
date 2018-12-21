@@ -6,6 +6,7 @@ class Footer extends Component {
 
         return (
             <div className="footer">
+                <hr/>
                 <a target="_blank" rel="noopener noreferrer" href="http://www.google.com">Privacy</a>
                 <a target="_blank" rel="noopener noreferrer" href="http://www.google.com">Terms</a>
                 <a target="_blank" rel="noopener noreferrer" href="http://www.google.com">Cookies</a>

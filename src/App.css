@@ -1,6 +1,11 @@
+body {
+    background-color: #b9b9b9;
+}
+
 .main-container {
     margin: auto;
-    width: 80%;
+    width: 75%;
+    background-color: white;
 }
 .header {
     margin: auto;
@@ -8,7 +13,7 @@
 }
 
 .top-header {
-    background-color: blue;
+    background-color: #081db5;
     height: 50px;
     text-align: right;
     display: inline-block;
@@ -16,7 +21,7 @@
 }
 
 .dropbtn {
-    background-color: blue;
+    background-color: #081db5;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -42,18 +47,13 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-;
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: blue;}
-
-.initials {
-
-}
+.dropdown:hover .dropbtn {background-color: #081db5;}
 
 .picture {
     width: 150px;
@@ -65,11 +65,42 @@
 
 .footer {
     margin: auto;
-    height: 25px;
+    height: 50px;
     text-align: center;
 }
 
 .footer a {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.article {
+    width: 350px;
+    height: 450px;
+    margin: 40px;
+    border: groove;
+}
+
+.article-image {
+    height: 50%;
+}
+
+.article-title {
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+
+.article-decription {
+    margin-top: 10px;
+    height: 30%;
+    margin-left: 15px;
+}
+
+.article-category {
+    margin-left: 30px;
+}
+
+.articles-grid {
+    display: flex;
+    flex-wrap: wrap;
 }

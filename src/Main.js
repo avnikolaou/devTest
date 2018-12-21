@@ -12,7 +12,7 @@ class Main extends Component {
         const {articles} = this.props;
 
         return (
-            <ul>
+            <ul className="articles-grid">
                 {articles.map(article => (
                     <div className="article">
                         <div className="article-image">
@@ -23,11 +23,11 @@ class Main extends Component {
                             {article.name}
                         </div>
 
-                        <div className="article-decripiton">
+                        <div className="article-decription">
                             {article.description}
                         </div>
 
-                        <div className="article-cateogory">
+                        <div className="article-category">
                             {article.category}
                         </div>
                     </div>
