@@ -21,7 +21,7 @@ class App extends Component {
             }).then(function(data) {
                 this.setState({
                     articles: data.sources
-                })
+                });
         }.bind(this)).catch(() => {
             alert("Could not fetch date from API!!");
         });
@@ -32,15 +32,12 @@ class App extends Component {
         const {articles } = this.state;
         return (
             <div>
-                <Header/>
-                <div className="main-content">
-                    <ol>
-                        {this.state.articles.map(article => (
-                            <p>{article.name}</p>
-                        ))}
-                    </ol>
+                <div className="main-container">
+                    <Header/>
+                    <Main articles={this.state.articles}/>
+                    <Footer/>
                 </div>
-                <Footer/>
+
             </div>
         );
     }

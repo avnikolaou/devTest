@@ -9,25 +9,31 @@ class Main extends Component {
 
     render() {
 
-        const {article} = this.props;
+        const {articles} = this.props;
+
         return (
-            <li>
-                <div className="article">
-                    <div className="article-image">
+            <ul>
+                {articles.map(article => (
+                    <div className="article">
+                        <div className="article-image">
 
+                        </div>
+
+                        <div className="article-title">
+                            {article.name}
+                        </div>
+
+                        <div className="article-decripiton">
+                            {article.description}
+                        </div>
+
+                        <div className="article-cateogory">
+                            {article.category}
+                        </div>
                     </div>
+                ))}
 
-                    <div className="article-title">
-
-                    </div>
-
-                    <div className="article-decripiton">
-
-                    </div>
-
-                    <div className="article-cateogory">{article.category}</div>
-                </div>
-            </li>
+            </ul>
         )
     }
 }
