@@ -7,33 +7,44 @@ class Main extends Component {
         articles: PropTypes.array.isRequired
     };
 
+    previusPage(index) {
+
+    };
+
+    nextPage() {
+
+    };
+
+
     render() {
 
-        const {articles} = this.props;
+        const { articles } = this.props;
 
         return (
-            <ul className="articles-grid">
-                {articles.map(article => (
-                    <div className="article">
-                        <div className="article-image">
+            <div>
+                <ul className="articles-grid">
+                    {articles.map(article => (
+                        <div key={article.id} className="article">
+                            <div className="article-image">
 
+                            </div>
+
+                            <div className="article-title">
+                                {article.name}
+                            </div>
+
+                            <div className="article-decription">
+                                {article.description}
+                            </div>
+
+                            <div className="article-category">
+                                {article.category}
+                            </div>
                         </div>
+                    ))}
+                </ul>
 
-                        <div className="article-title">
-                            {article.name}
-                        </div>
-
-                        <div className="article-decription">
-                            {article.description}
-                        </div>
-
-                        <div className="article-category">
-                            {article.category}
-                        </div>
-                    </div>
-                ))}
-
-            </ul>
+            </div>
         )
     }
 }
